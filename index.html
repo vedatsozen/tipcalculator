@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<link rel="stylesheet" href="stil.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet"> 
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+<div id="orta">
+    <div id="sol">
+        <table>
+        <tr><td id="bill">Bill</td></tr>
+        <tr><td><input id="holder1" placeholder="$                  0"></td></tr>
+        <tr><td id="tip">Select Tip %</td></tr>
+
+        <tr><td id="buttons1">
+        <button type="button" onclick="calfive()">5%</button>
+        <button type="button" onclick="calten()">10%</button>
+        <button type="button" onclick="calfifteen()">15%</button>
+        </td></tr>
+
+        <tr><td id="buttons2">
+        <button type="button" onclick="caltwentyfive()">25%</button>
+        <button type="button" onclick="calfifty()">50%</button>
+        <button id="custom" type="button" style="button:disabled"; >Custom</button>
+        </td></tr>
+        <tr><td id="nop">Number Of People</td></tr>
+        <tr><td><input id="holder2"  placeholder="$                  0"></td></tr>
+
+        
+    </table>
+  
+    </div>
+    <div id="sag">
+        <table>
+        <tr><td id="tipamount">Tip Amount/Person</td><td id="tipamount2">$0.00</td></tr>
+        <tr><td id="totalperson">Total/Person</td><td id="totalperson2">$0.00</td></tr>
+        
+    </table><br>
+    <br>
+    <button type="button" id="reset" value="reset" onclick="reset()">RESET</button>
+
+
+    </div>
+</div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Vedat Sözen</a>.
+  </div>
+<script>
+
+var tips = [0];
+
+function calfive() {
+
+var firstvalue = document.getElementById("holder1").value;
+var secondvalue = document.getElementById("holder2").value;
+var result = ( firstvalue * 0.05 ) / secondvalue ;
+var flooredresult = Math.floor(result);
+tips.push(flooredresult);
+document.getElementById("tipamount2").innerHTML = flooredresult;
+
+var sum = tips.reduce((accumulator,currentValue) => {
+
+    return accumulator + currentValue ;
+
+},0 );
+
+document.getElementById("totalperson2").innerHTML = sum;
+
+}
+
+//second function
+
+function calten() {
+
+var firstvalue = document.getElementById("holder1").value;
+var secondvalue = document.getElementById("holder2").value;
+var result = ( firstvalue * 0.10 ) / secondvalue ;
+var flooredresult = Math.floor(result);
+tips.push(flooredresult);
+document.getElementById("tipamount2").innerHTML = flooredresult;
+
+var sum = tips.reduce((accumulator,currentValue) => {
+
+    return accumulator + currentValue ;
+
+},0 );
+
+document.getElementById("totalperson2").innerHTML = sum;
+
+}
+
+// third function
+
+function calfifteen() {
+
+var firstvalue = document.getElementById("holder1").value;
+var secondvalue = document.getElementById("holder2").value;
+var result = ( firstvalue * 0.15 ) / secondvalue ;
+var flooredresult = Math.floor(result);
+tips.push(flooredresult);
+document.getElementById("tipamount2").innerHTML = flooredresult;
+
+var sum = tips.reduce((accumulator,currentValue) => {
+
+    return accumulator + currentValue ;
+
+},0 );
+
+document.getElementById("totalperson2").innerHTML = sum;
+
+}
+
+//forth function
+
+function caltwentyfive() {
+
+var firstvalue = document.getElementById("holder1").value;
+var secondvalue = document.getElementById("holder2").value;
+var result = ( firstvalue * 0.25 ) / secondvalue ;
+var flooredresult = Math.floor(result);
+tips.push(flooredresult);
+document.getElementById("tipamount2").innerHTML = flooredresult;
+
+var sum = tips.reduce((accumulator,currentValue) => {
+
+    return accumulator + currentValue ;
+
+},0 );
+
+document.getElementById("totalperson2").innerHTML = sum;
+
+}
+
+//fifth function
+
+function calfifty() {
+
+var firstvalue = document.getElementById("holder1").value;
+var secondvalue = document.getElementById("holder2").value;
+var result = ( firstvalue * 0.50 ) / secondvalue ;
+var flooredresult = Math.floor(result);
+tips.push(flooredresult);
+document.getElementById("tipamount2").innerHTML = flooredresult;
+
+var sum = tips.reduce((accumulator,currentValue) => {
+
+    return accumulator + currentValue ;
+
+},0 );
+
+document.getElementById("totalperson2").innerHTML = sum;
+
+}
+
+function reset() {
+
+window.location.reload();
+
+}
+
+
+</script>
+</body>
+</html>

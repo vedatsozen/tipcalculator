@@ -1,0 +1,178 @@
+body {
+
+background-color: hsl(172, 67%, 45%);
+margin: auto;
+text-align: center;
+font-family: 'Space Mono', monospace;
+}
+
+#orta {
+
+    margin: auto;
+    margin-top:150px;
+    height: 300px;
+    width:620px;
+    border-radius: 5px;
+    background: white;
+    padding:5px;
+    vertical-align: middle;
+    display: flex;
+   
+}
+
+#sol {
+
+    margin: auto;
+    height:300px;
+    width:310px;
+    border-radius: 5px;
+    background-color: hsl(185, 41%, 84%);
+    margin-right: 10px;
+    display: inline;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+#sag {
+
+    margin: auto;
+    height: 300px;
+    width: 310px;
+    border-radius: 5px;
+    background-color: hsl(183, 100%, 15%);
+    display: inline;
+
+}
+
+.attribution { font-size: 11px; text-align: center; }
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+input {
+
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+}
+
+button {
+
+height: 40px;
+width: 80px;
+background-color:hsl(183, 100%, 15%);
+color: white;
+font-family: 'Space Mono', monospace;
+padding: 2px;
+border: none;
+border-radius: 5px;
+}
+
+
+
+#tip { 
+    
+    text-align: left;
+    font-size: 14px;
+
+}
+
+#bill { 
+    
+    text-align: left;
+    font-size: 14px;
+
+}
+
+#nop { 
+    
+    text-align: left;
+    font-size: 14px;
+
+}
+
+#buttons1, #buttons2 {
+    
+    text-align: left;
+
+}
+
+#holder1 {
+
+    text-align: right;
+    width:280px;
+}
+
+#holder2 {
+
+    text-align: right;
+    width:280px;
+}
+
+#sag {
+
+margin: auto;
+text-align: center;
+vertical-align: middle;
+justify-content: center;
+
+}
+
+#sag table {
+
+    margin: auto;
+    text-align: center;
+   
+    
+    }
+
+#sag table {
+
+margin: auto;
+text-align: center;
+margin-top: 30px;
+
+}
+
+#tipamount {
+
+    font-size: 8px;
+    color: white;
+}
+
+#tipamount2 {
+
+    font-size: 40px;
+    color:hsl(184, 14%, 56%);
+}
+
+#totalperson {
+
+    font-size: 8px;
+    color: white;
+}
+
+#totalperson2 {
+
+    font-size:40px;
+    color:hsl(184, 14%, 56%);
+}
+
+button#reset {
+
+cursor: pointer;
+opacity: 0.5;
+background-color:hsl(184, 14%, 56%);;
+
+}
+
+button {
+
+    cursor: pointer;
+}
+
+button:active {
+
+transform: scale(0.8);
+
+}
